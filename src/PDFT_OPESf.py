@@ -496,7 +496,7 @@ def main():
                             input=plumed_dat, timestep=timestep*ps, atoms=atoms, kT=kB*T)
 
     elif args.method == 'mc-pdft':
-        atoms.calc = Plumed(calc=PySCF_MCPDFT(atoms, args.basis, args.ontop, args.n_act, args.n_elec),
+        atoms.calc = Plumed(calc=PySCF_MCPDFT(atoms, args.basis, args.ontop, args.n_act, args.n_elec, args.charge, args.spin),
                             input=plumed_dat, timestep=timestep*ps, atoms=atoms, kT=kB*T)
     
     if args.position_npy is not None:
@@ -509,11 +509,13 @@ def main():
     
     dyn = NVTBerendsen(atoms, timestep=timestep*ps, temperature_K=T, taut=1*ps,
                        trajectory='md.traj', logfile='md.log')
-
+    
+    product_reg = -0.18 # Diels-Alder 
+    #product_reg = 0.025 # SN2
     for step in range(steps):
         dyn.run(1)
         if step > 1 and step % 10 == 0:
-            if check_cv_from_colvar('COLVAR', -0.18):
+            if check_cv_from_colvar('COLVAR', product_reg):
                 dyn.run(100)
                 print("Stopping simulation: cv exceeded threshold.")
                 break
