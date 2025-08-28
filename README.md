@@ -1,6 +1,6 @@
 # PDFT_OPESf: Kinetics for Strongly Correlated Reactions
 
-**PDFT-OPESf** couples multi-configuration pair-density functional theory (MC-PDFT) with on-the-fly enhanced sampling-flooding (OPESf) enhanced sampling with ASE molecular dynamics, enabling efficient kinetics for strongly correlated reactive systems.
+**PDFT-OPESf** couples multi-configuration pair-density functional theory (MC-PDFT) with on-the-fly enhanced sampling-flooding (OPESf) enhanced sampling via ASE molecular dynamics, enabling efficient rate calculations for strongly correlated reactive systems.
 
 ## 📚 Requirements
 
