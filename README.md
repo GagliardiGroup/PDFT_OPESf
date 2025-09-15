@@ -1,10 +1,10 @@
-# PDFT_OPESf: Reaction Kinetics with Multireference Electronic Structure
+# MC-PDFT-OPESf: Reaction Kinetics with Multireference Electronic Structure
 
-**PDFT-OPESf** couples multi-configuration pair-density functional theory (MC-PDFT) with on-the-fly enhanced sampling-flooding (OPESf) enhanced sampling via ASE, enabling efficient rate calculations for strongly correlated reactive systems.
+**MC-PDFT-OPESf** couples multi-configuration pair-density functional theory (MC-PDFT) with on-the-fly enhanced sampling-flooding (OPESf) enhanced sampling via ASE, enabling efficient rate calculations for strongly correlated reactive systems.
 
 ## 📚 Requirements
 
-To use PDFT-OPESf, you'll need the following Python packages:
+To use MC-PDFT-OPESf, you'll need the following Python packages:
 ```bash
 pip install pyscf ase
 ```
@@ -32,16 +32,8 @@ python src/PDFT_OPESf.py --method ks-dft --xyz data/sn2/frame_sn2.xyz --plumed d
 
 ## 📜 Citation
 
-If you use **WASP** in your research or publications, please cite the following:
+If you use **MC-PDFT-OPESf** in your research or publications, please cite the following:
 
 ```bibtex
-@misc{seal2025wasp,
-      title={Weighted Active Space Protocol for Multireference Machine-Learned Potentials}, 
-      author={Aniruddha Seal and Simone Perego and Matthew R. Hennefarth and Umberto Raucci and Luigi Bonati and Andrew L. Ferguson and Michele Parrinello and Laura Gagliardi},
-      year={2025},
-      eprint={2505.10505},
-      archivePrefix={arXiv},
-      primaryClass={physics.chem-ph},
-      url={https://arxiv.org/abs/2505.10505}, 
-}
+
 ```
