@@ -43,16 +43,12 @@ def check_cv_from_colvar(filename, threshold=0.1):
     Returns:
     - bool: True if cv exceeds the threshold, False otherwise.
     """
-    try:
-        data = np.loadtxt(filename, comments="#")
-        if data.size == 0:
-            return False
-
-        # Extract the last value of c1
-        c1_value = data[-1, 3]  # assuming c1 is the 4th column (0-indexed)
-
-        return c1_value > threshold
-    except Exception as e:
-        print(f"Error reading COLVAR file: {e}")
+    data = np.loadtxt(filename, comments="#")
+    if data.size == 0:
         return False
+
+    # Extract the last value of c1
+    c1_value = data[-1, 3]  # assuming c1 is the 4th column (0-indexed)
+
+    return c1_value > threshold
 
