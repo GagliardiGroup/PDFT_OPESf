@@ -35,5 +35,14 @@ python src/PDFT_OPESf.py --method ks-dft --xyz data/sn2/frame_sn2.xyz --plumed d
 If you use **MC-PDFT-OPESf** in your research or publications, please cite the following:
 
 ```bibtex
+@article{seal2025computing,
+  title={Computing Reaction Kinetics with MC-PDFT--OPESf: Combining Multireference Electronic Structure Theory and Enhanced Sampling},
+  author={Seal, Aniruddha and Gagliardi, Laura and Ferguson, Andrew L},
+  journal={The Journal of Physical Chemistry Letters},
+  volume={16},
+  pages={11458--11463},
+  year={2025},
+  publisher={ACS Publications}
+}
 
 ```
